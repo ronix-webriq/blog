@@ -5,12 +5,15 @@ export const fetchPosts = (getPost) => {
         `*[_type == "post"] {
             title,
             slug,
+            publishedAt,
             mainImage {
                 asset-> {
                     _id,
                     url
                 }
-            }
+            },
+            "name": author -> name,
+            "authorImage": author -> image
         }`
     )
     .then(data => getPost(data))
@@ -34,5 +37,20 @@ export const fetchSinglePost = (getSinglePost, slug) => {
         }`, { slug }
     )
     .then(data => getSinglePost(data[0]))
+    .catch(err => console.log(err))
+}
+export const fetchProjects = (getProjects) => {
+    sanityClient.fetch(
+        `*[_type == "projects"] {
+            project_name,
+            slug,
+            description,
+            categories,
+            github_url,
+            project_url,
+            date_created
+        }`
+    )
+    .then(data => getProjects(data))
     .catch(err => console.log(err))
 }

@@ -3,6 +3,7 @@ import { fetchSinglePost } from "../../sanityConfig/config";
 import imageUrlBuilder from '@sanity/image-url';
 import BLockContent from '@sanity/block-content-to-react'
 import sanityClient from '../../../client.js'
+import DrawerDesign from '../../design/drawerDesign';
 
 const builder = imageUrlBuilder(sanityClient);
 const  urlFor = (source) => {
@@ -17,7 +18,8 @@ function ViewPostComponent(props) {
     })
     
     return (
-        <div className="bg-gray-200 min-h-screen p-12">
+        <DrawerDesign>
+            <div className="min-h-screen p-12">
             {singlePost === null ?  <div>Loading...</div> :
             <div className="container shadow-lg">
                 <div className="relative">
@@ -37,10 +39,12 @@ function ViewPostComponent(props) {
                 projectId={sanityClient.clientConfig.projectId} 
                 dataset={sanityClient.clientConfig.dataset}
                 />
+               
             </div>
             </div>
             }
         </div>
+        </DrawerDesign>
     )
 }
 
