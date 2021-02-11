@@ -10,9 +10,9 @@ function AllProjectsComponent() {
     React.useEffect(() => {
         fetchProjects(setProjects)
     }, [])
+
     return (
         <DrawerDesign>
-            {projects && console.log(projects) }
             <Box padding={2}>
                 <Typography variant='h4'>
                     Projects
@@ -20,7 +20,7 @@ function AllProjectsComponent() {
                 <Divider />
             </Box>
             <Box padding={2}>
-                <TableDesign project={projects}/>
+                {projects===null ? <div>Loading...</div>:<TableDesign project={projects}/>}
             </Box>
         </DrawerDesign>
     )
