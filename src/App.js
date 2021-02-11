@@ -6,6 +6,9 @@ import BlogPost from './components/views/blogPost';
 import DashboardView from './components/views/dashboardView';
 import Projects from './components/views/projects';
 import ViewPost from './components/views/viewPost';
+import Games from './components/views/games';
+import Mathquiz from './components/views/mathquiz';
+import Quiz from './components/games/mathquiz/quiz/quiz';
 
 function App() {
   return (
@@ -15,7 +18,10 @@ function App() {
         <Route path="/" exact component={DashboardView} />
         <Route path="/blogs" exact component={BlogPost} />
         <Route path="/blogs/:slug" exact component={ViewPost} />
-        <Route path="/projects" component={Projects} />
+        <Route path="/projects" exact component={Projects} />
+        <Route path="/games" exact component={Games} />
+        <Route path="/games/mathquiz" exact component={Mathquiz} />
+        <Route path="/games/mathquiz/:id" exact component={Quiz} />
         {/* <Route path="/projects/:slug" component={ViewPost} /> */}
       </Router>
   );

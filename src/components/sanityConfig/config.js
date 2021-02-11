@@ -54,3 +54,19 @@ export const fetchProjects = (getProjects) => {
     .then(data => getProjects(data))
     .catch(err => console.log(err))
 }
+
+export const fetchQuiz = (getQuiz) => {
+    sanityClient.fetch(
+        `*[_type == "math_quiz"] {
+            question_number,
+            question,
+            answer,
+            choice_a,
+            choice_b,
+            choice_c,
+            choice_d,
+        }`
+    )
+    .then(data => getQuiz(data))
+    .catch(err => console.log(err))
+}

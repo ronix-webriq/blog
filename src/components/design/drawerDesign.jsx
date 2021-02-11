@@ -19,6 +19,7 @@ import { useHistory } from 'react-router-dom';
 import { Dashboard } from '@material-ui/icons';
 import CropOriginalIcon from '@material-ui/icons/CropOriginal';
 import AccountTreeIcon from '@material-ui/icons/AccountTree';
+import GamesIcon from '@material-ui/icons/Games';
 
 const drawerWidth = 240;
 
@@ -108,6 +109,11 @@ export default function DrawerDesign(props) {
 			path: '/projects',
 			text: 'Projects',
 			icon: <AccountTreeIcon />,
+		},
+		{
+			path: '/games',
+			text: 'Games',
+			icon: <GamesIcon />,
 		},
 	];
 
