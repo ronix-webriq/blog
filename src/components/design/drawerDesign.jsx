@@ -20,6 +20,8 @@ import { Dashboard } from '@material-ui/icons';
 import CropOriginalIcon from '@material-ui/icons/CropOriginal';
 import AccountTreeIcon from '@material-ui/icons/AccountTree';
 import GamesIcon from '@material-ui/icons/Games';
+import SettingsIcon from '@material-ui/icons/Settings';
+import PlaylistAddCheckIcon from '@material-ui/icons/PlaylistAddCheck'
 
 const drawerWidth = 240;
 
@@ -115,6 +117,16 @@ export default function DrawerDesign(props) {
 			text: 'Games',
 			icon: <GamesIcon />,
 		},
+		{
+			path: '/task-manager/todolist',
+			text: 'Task Manager',
+			icon: <PlaylistAddCheckIcon />,
+		},		
+		// {
+		// 	path: '/settings',
+		// 	text: 'Settings',
+		// 	icon: <SettingsIcon />
+		// },
 	];
 
 	return (

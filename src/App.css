@@ -4,3 +4,6 @@
 .cardGame:hover {
   box-shadow: 5px 5px 5px 5px lightgray;
 }
+.selected {
+  box-shadow: 2px 2px 2px 2px #333;
+}

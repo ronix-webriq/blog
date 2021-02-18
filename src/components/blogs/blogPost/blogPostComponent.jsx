@@ -28,7 +28,7 @@ function BlogPostComponent() {
 			<Divider />
             <Box padding={2}>
                 <Grid container spacing={1}>
-                    {posts && posts.map((post, index) =>
+                    {posts == null ? <div>Loading...</div> : posts.map((post, index) =>
                         <Grid item xs={4} key={index}>
                             {console.log(post)}
                             <CardDesign posts={post} authorImage={urlFor(post.authorImage)}/>
