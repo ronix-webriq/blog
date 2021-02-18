@@ -8,8 +8,8 @@ import Projects from './components/views/projects';
 import ViewPost from './components/views/viewPost';
 import Games from './components/views/games';
 import Settings from './components/views/settings';
-import Mathquiz from './components/games/mathquiz/mathquiz';
-import QuizComponent from './components/games/mathquiz/quizComponent';
+// import Mathquiz from './components/games/mathquiz/mathquiz';
+// import QuizComponent from './components/games/mathquiz/quizComponent';
 import Todolist from './components/taskManager/todoList';
 
 function App() {
@@ -28,8 +28,8 @@ function App() {
 
         {/* Games */}
         <Route path="/games" exact component={Games} />
-        <Route path="/games/mathquiz" exact component={Mathquiz} />
-        <Route path="/games/mathquiz/:id" exact component={QuizComponent} />
+        {/* <Route path="/games/mathquiz" exact component={Mathquiz} /> */}
+        {/* <Route path="/games/mathquiz/:id" exact component={QuizComponent} /> */}
         {/* <Route path="/games/millionairesgame" exact component={Millionairesgame} /> */}
 
         {/* Task Manager */}
